@@ -1,7 +1,8 @@
+/* eslint-disable node/prefer-global/process */
 /// <reference types="vitest" />
 
 import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -10,13 +11,15 @@ import UniLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
-export default defineConfig(async () => {
+export default defineConfig(async ({ mode }) => {
   /**
    * 为兼容 @dcloudio/vite-plugin-uni 采用 CJS ，而 UnoCSS 只支持 ESM
    * @see https://github.com/dcloudio/uni-app/issues/4815
    */
   const Unocss = await import('unocss/vite').then(i => i.default)
 
+  const ENV = loadEnv(mode, process.cwd())
+  console.log(`当前vite环境---${ENV.VITE_NODE_ENV}---`)
   return {
     resolve: {
       alias: {

@@ -8,6 +8,9 @@ module.exports = uni(
         'vue/component-name-in-template-casing': ['error', 'PascalCase'],
       },
     },
+    rules: {
+      'no-console': 'off',
+    },
   },
   unocss.configs.flat,
 )

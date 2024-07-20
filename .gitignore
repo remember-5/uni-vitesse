@@ -11,7 +11,7 @@ node_modules
 .DS_Store
 dist
 *.local
-
+uni-pages.d.ts
 # Editor directories and files
 .idea
 *.suo

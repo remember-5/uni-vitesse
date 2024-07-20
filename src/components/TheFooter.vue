@@ -15,5 +15,11 @@
     <div icon-btn title="GitHub" @click="router.push('https://github.com/Ares-Chang/uni-vitesse')">
       <div i-carbon-logo-github />
     </div>
+    <div>
+      <uni-icons custom-prefix="iconfont" type="icon-icon-shouye-blue" size="30" />
+      <uni-icons custom-prefix="iconfont" type="icon-kabao1" size="30" />
+      <uni-icons custom-prefix="iconfont" type="icon-xiaoxilanse" size="30" />
+      <uni-icons custom-prefix="iconfont" type="icon-wode" size="30" />
+    </div>
   </div>
 </template>
