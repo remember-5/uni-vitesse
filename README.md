@@ -132,8 +132,6 @@ pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
 
 参考 uni-app 官方文档：[运行、发布uni-app](https://uniapp.dcloud.net.cn/quickstart-cli.html#%E8%BF%90%E8%A1%8C%E3%80%81%E5%8F%91%E5%B8%83uni-app)
 
-### 微信小程序自动上传
-
 ### swagger自动生成ts接口需知:
 
 1. 本地在根文件目录执行`pnpm run swagger`
@@ -148,7 +146,7 @@ pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
     ```bash
     nano ~/.zshrc
     ```
-  - .zshrc文件中末行添加至一下代码
+  - .zshrc文件中末行添加至以下代码
     ```bash
     export PATH="/Applications/wechatwebdevtools.app/Contents/MacOS:$PATH"
     ```
@@ -162,7 +160,7 @@ pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
     ```bash
     cli login
     ```
-- 查询是否已经登陆工具(并在项目中 manifest.json文件配置上传至公众平的appid)
+- 查询是否已经登陆工具(并在项目中 manifest.json文件配置上传至公众平台的appid)
     ```bash
     cli islogin
     ```
