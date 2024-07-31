@@ -91,5 +91,15 @@ export default defineConfig(async ({ mode }) => {
     test: {
       environment: 'jsdom',
     },
+
+    css: {
+      // css预处理器
+      preprocessorOptions: {
+        scss: {
+          // 引入全局scss变量
+          additionalData: '@import "@/styles/global.scss";',
+        },
+      },
+    },
   }
 })
