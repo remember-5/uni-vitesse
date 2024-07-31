@@ -97,7 +97,7 @@ export default defineConfig(async ({ mode }) => {
       preprocessorOptions: {
         scss: {
           // 引入全局scss变量
-          additionalData: '@import "@/styles/global.scss";',
+          additionalData: '@import "~/styles/global.scss";',
         },
       },
     },
