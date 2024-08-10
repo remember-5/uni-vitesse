@@ -249,10 +249,10 @@ import xxxxx;
 <script setup>
   import { ref, reactive } from 'vue';
   import { message } from 'ant-design-vue';
-  import { SmartLoading } from '/@/components/framework/smart-loading';
+  import { SmartLoading } from '/@/components/framework/smartLoading';
   import _ from 'lodash';
-  import { categoryApi } from '/@/api/business/category/category-api';
-  import { smartSentry } from '/@/lib/smart-sentry';
+  import { categoryApi } from '/@/api/business/category/categoryApi';
+  import { smartSentry } from '/@/lib/smartSentry';
 
   // emit
   const emit = defineEmits('reloadList');
@@ -334,10 +334,10 @@ import xxxxx;
 <script setup>
   import { ref, reactive } from 'vue';
   import { message } from 'ant-design-vue';
-  import { SmartLoading } from '/@/components/framework/smart-loading';
+  import { SmartLoading } from '/@/components/framework/smartLoading';
   import _ from 'lodash';
-  import { categoryApi } from '/@/api/business/category/category-api';
-  import { smartSentry } from '/@/lib/smart-sentry';
+  import { categoryApi } from '/@/api/business/category/categoryApi';
+  import { smartSentry } from '/@/lib/smartSentry';
 
   // -----------------  定义 所有变量  -----------------
 
