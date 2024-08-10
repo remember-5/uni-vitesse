@@ -3,6 +3,6 @@
 </script>
 
 <style lang="scss">
-@import "@/static/iconfont.css";
-@import '@/styles/main.css';
+@import "~/static/iconfont.css";
+@import '~/styles/main.css';
 </style>
