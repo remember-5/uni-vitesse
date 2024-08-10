@@ -72,6 +72,7 @@ export default defineConfig(async ({ mode }) => {
        * @see https://github.com/antfu/vite-plugin-components
        */
       Components({
+        globs: ['src/components/*.{vue}'],
         dts: 'src/components.d.ts',
       }),
 
