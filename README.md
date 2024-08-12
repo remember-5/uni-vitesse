@@ -668,10 +668,9 @@ src                               源码目录
 |-- utils                            工具类
 |-- views                            视图目录
 |   |-- role                             role模块名
-|   |-- |-- role-list.vue                    role列表页面
-|   |-- |-- role-add.vue                     role新建页面
-|   |-- |-- role-update.vue                  role更新页面
-|   |-- |-- index.less                      role模块样式
+|   |-- |-- roleList.vue                    role列表页面
+|   |-- |-- roleAdd.vue                     role新建页面
+|   |-- |-- roleUpdate.vue                  role更新页面
 |   |-- |-- components                      role模块通用组件文件夹
 |   |-- employee                         employee模块
 ```
@@ -686,7 +685,7 @@ src                               源码目录
 
 正例：
 
-前端： `department-api.js`
+前端： `departmentApi.js`
 
 ```
 import { getRequest, postRequest } from '/@/lib/axios';
