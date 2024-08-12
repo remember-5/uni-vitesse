@@ -72,7 +72,7 @@ export default defineConfig(async ({ mode }) => {
        * @see https://github.com/antfu/vite-plugin-components
        */
       Components({
-        globs: ['src/components/*.{vue}'],
+        // globs: ['src/components/*.{vue}'],  //TODO 官方默认配置有点问题 (需调研)
         dts: 'src/components.d.ts',
       }),
 

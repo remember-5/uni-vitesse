@@ -682,6 +682,7 @@ src                               源码目录
 *   api文件必须导出对象必须以`Api`为结尾，如：`employeeApi`、`noticeApi`
 *   api中以一个对象将方法包裹
 *   api中的注释，必须和后端 swagger 文档保持一致，同时保留后端作者
+*   注意：业务代码中推荐使用 swagger生成的ts进行扩展，避免重复书写ts
 
 正例：
 
@@ -854,4 +855,9 @@ export default {
 |   |-- employee                                 employee模块
 |   |-- behaviorLog                             行为日志log模块
 |   |-- codeGenerator                           代码生成器模块
+```
+## git 提交注意事项
+前端同学使用vscode提交代码时，需关闭npm run的命令终端后，方可使用可视化工具提交代码
+```bash
+# 注意!! 不关终端会自动编译生成文件 导致eslint校验代码丢失(仅针对于可视化工具，使用命令行同学可忽略此提示)
 ```
