@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "types": [
       "@dcloudio/types",
-      "@uni-helper/uni-app-types"
+      "@uni-helper/uni-types"
     ],
     "allowJs": true,
     "strict": true,

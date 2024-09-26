@@ -836,7 +836,9 @@ export default {
 ## 5.7、 views 目录
 
 目录要求，按照模块划分，其中具体文件名要求如下：
-
+```bash
+# 注意!! 仅服务于当前页面的组件 请放至当前页面文件夹下components(不能拼写有误,否则会被自动注册为路由)
+```
 *   如果是列表页面，要以list为结尾，如`roleList.vue`、`cacheList.vue`
 *   如果是 表单页面，要以 form为结尾，如 `roleForm.vue`、`noticeAddForm.vue`
 *   如果是 modal弹窗，要以 modal为结尾，如 表单弹窗 `roleFormModal.vue`，详情 `roleDetailModal.vue`

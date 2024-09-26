@@ -35,6 +35,7 @@ export default defineConfig(async ({ mode }) => {
         subPackages: [
           'src/pages-sub',
         ],
+        exclude: ['**/components/**'],
       }),
 
       /**
