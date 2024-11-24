@@ -56,6 +56,8 @@
 
 - ~~VueUse~~
 
+> `VueUse@10.x` 及之后[不专门兼容 UniApp](https://github.com/dcloudio/uni-app/issues/4604)，可以安装 `VueUse@9.x` 之前版本，或者安装 [vite-plugin-uni-polyfill](https://github.com/Ares-Chang/vite-plugin-uni-polyfill) 插件，做简单兼容。
+
 ## 预配置
 
 ### UI 框架
@@ -88,7 +90,7 @@
 
   - [`vite-plugin-uni-layouts`](https://github.com/uni-helper/vite-plugin-uni-layouts) - 页面布局系统
 
-  - [`uni-app-types`](https://github.com/uni-helper/uni-app-types) - UniApp 类型增强
+  - [`uni-types`](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-types) - UniApp 类型增强
 
   - [`unocss-preset-uni`](https://github.com/uni-helper/unocss-preset-uni) - UnoCSS UniApp 预设，修复 `Windows` 平台频繁崩溃问题 [#3603](https://github.com/dcloudio/uni-app/issues/3603)
 

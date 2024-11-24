@@ -56,6 +56,8 @@ If there is no cross-end requirement, [Vitesse-lite](https://github.com/antfu/vi
 
 - ~~VueUse~~
 
+> `VueUse@10.x` and later are [not specifically compatible with UniApp](https://github.com/dcloudio/uni-app/issues/4604), you can install the version before `VueUse@9.x`, or install the [vite-plugin-uni-polyfill](https://github.com/Ares-Chang/vite-plugin-uni-polyfill) plugin for simple compatibility.
+
 ## Pre-packed
 
 ### UI Frameworks
@@ -88,7 +90,7 @@ If there is no cross-end requirement, [Vitesse-lite](https://github.com/antfu/vi
 
   - [`vite-plugin-uni-layouts`](https://github.com/uni-helper/vite-plugin-uni-layouts) - layouts for pages
 
-  - [`uni-app-types`](https://github.com/uni-helper/uni-app-types) - UniApp Type enhance
+  - [`uni-types`](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-types) - UniApp Type enhance
 
   - [`unocss-preset-uni`](https://github.com/uni-helper/unocss-preset-uni) - UnoCSS UniApp preset，Fixed `Windows` Frequent platform crashes [#3603](https://github.com/dcloudio/uni-app/issues/3603)
 

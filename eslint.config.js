@@ -10,6 +10,9 @@ module.exports = uni(
     },
     rules: {
       'no-console': 'off',
+      'node/prefer-global/process': 'off',
+      // ...其他规则
+      'unicorn/prefer-node-protocol': 'off',
     },
   },
   unocss.configs.flat,

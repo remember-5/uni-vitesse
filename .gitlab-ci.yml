@@ -1,0 +1,39 @@
+# 本次构建的阶段：build package
+stages:
+  - merge
+  - build
+  - notify
+
+default:
+  image: docker:26.1.3
+
+cache:
+  paths:
+    - /root/.npm
+    - /root/.pnpm-store
+
+# 全局环境变量
+variables:
+  APP_ID: xxxxx
+  DOCKER_IMAGE_NAME: xxxx
+
+  # 邮件配置
+  # SMTP_HOST: 'smtp.163.com'
+  # SMTP_HOST_ADDRESS: 'smtp.163.com'
+  # SMTP_HOST_PORT: '465'
+  # SMTP_HOST_USER: 'xxx@163.com'
+  # SMTP_HOST_PASSWORD: 'xxx' # 可配置在gitlab runner variables中
+  # EMAIL_RECIPIENTS: 'xxx@qq.com' # 通知人邮箱, 多个可用逗号隔开 可配置在gitlab runner variables中
+
+# 导入单个模版
+include:
+  - local: .gitlab/ci/release/*.gitlab-ci.yml
+    rules:
+      - if: $CI_COMMIT_BRANCH =~ /^main/
+  - local: .gitlab/ci/test/*.gitlab-ci.yml
+    rules:
+      - if: $CI_COMMIT_BRANCH =~ /^test/
+  - local: .gitlab/ci/merge/*.gitlab-ci.yml
+    rules:
+      # 合并至main分支时触发 只有合并代码时触发
+      - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "test"

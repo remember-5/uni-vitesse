@@ -1,0 +1,29 @@
+# 构建环境
+test-build:
+  stage: build
+  image: node:18.20.4-alpine
+  variables:
+    ACTIVE_ENV: test
+  script:
+    - npm i pnpm -g --registry https://registry.npmmirror.com
+    - pnpm config set store-dir /root/.pnpm-store
+    - pnpm install --registry https://registry.npmmirror.com
+    - pnpm run build:mp-weixin:${ACTIVE_ENV}
+    - node wx-mp-upload.js
+  tags:
+    - docker
+  only:
+    - test
+
+test-notify:
+  stage: notify
+  image: python:3.10-alpine
+  allow_failure: true
+  variables:
+    DOCKER_IMAGE_TAG: test
+  script:
+    - python3 deploy/send_email.py
+  tags:
+    - docker
+  only:
+    - test
