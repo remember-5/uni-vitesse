@@ -90,7 +90,7 @@
     "@vue/test-utils": "^2.4.6",
     "eslint": "^8.57.1",
     "lint-staged": "^15.2.10",
-    "openapi-ts-request": "^0.12.1",
+    "openapi-ts-request": "^0.13.0",
     "pnpm": "^9.10.0",
     "sass": "^1.79.1",
     "simple-git-hooks": "^2.11.1",

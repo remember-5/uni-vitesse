@@ -2,9 +2,6 @@ merge-into-test:
   image: node:18.20.4-alpine
   stage: merge
   script:
-    - npm i pnpm -g --registry https://registry.npmmirror.com
-    - pnpm config set store-dir /root/.pnpm-store
-    - pnpm install --registry https://registry.npmmirror.com
-    - pnpm run build:mp-weixin
+    - *.npm-build
   tags:
     - docker

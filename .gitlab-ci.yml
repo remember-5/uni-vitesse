@@ -4,6 +4,21 @@ stages:
   - build
   - notify
 
+.npm-build: &npm-build
+  - npm i pnpm -g --registry https://registry.npmmirror.com
+  - pnpm config set store-dir /root/.pnpm-store
+  - pnpm install --registry https://registry.npmmirror.com
+  - pnpm run build:mp-weixin
+
+.mp-wx-upload: &mp-wx-upload
+  - node wx-mp-upload.js
+
+.email-notify: &email-notify
+  image: python:3.10-alpine
+  allow_failure: true
+  script:
+    - python3 deploy/send_email.py
+
 default:
   image: docker:26.1.3
 
@@ -27,12 +42,15 @@ variables:
 
 # 导入单个模版
 include:
+  # release environment
   - local: .gitlab/ci/release/*.gitlab-ci.yml
     rules:
       - if: $CI_COMMIT_BRANCH =~ /^main/
+  # test environment
   - local: .gitlab/ci/test/*.gitlab-ci.yml
     rules:
       - if: $CI_COMMIT_BRANCH =~ /^test/
+  # merge request
   - local: .gitlab/ci/merge/*.gitlab-ci.yml
     rules:
       # 合并至main分支时触发 只有合并代码时触发

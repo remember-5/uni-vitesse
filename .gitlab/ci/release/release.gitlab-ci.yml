@@ -3,11 +3,8 @@ main-build:
   stage: build
   image: node:18.20.4-alpine
   script:
-    - npm i pnpm -g --registry https://registry.npmmirror.com
-    - pnpm config set store-dir /root/.pnpm-store
-    - pnpm install --registry https://registry.npmmirror.com
-    - pnpm run build:mp-weixin
-    - node wx-mp-upload.js
+    - *.npm-build
+    - *.mp-wx-upload
   tags:
     - docker
   only:
@@ -15,12 +12,9 @@ main-build:
 
 main-notify:
   stage: notify
-  image: python:3.10-alpine
-  allow_failure: true
+  <<: *email-notify
   variables:
     DOCKER_IMAGE_TAG: prod
-  script:
-    - python3 deploy/send_email.py
   tags:
     - docker
   only:
